@@ -481,7 +481,8 @@ const nodeCmd = __webpack_require__(428);
 const nodeRsync = __webpack_require__(250);
 
 const { REMOTE_HOST, REMOTE_USER, SSH_PRIVATE_KEY, DEPLOY_KEY_NAME, SOURCE, TARGET, ARGS, GITHUB_WORKSPACE, HOME } = process.env;
-console.log('GITHUB_WORKSPACE', GITHUB_WORKSPACE);
+console.log(`GITHUB_WORKSPACE is set to: ${GITHUB_WORKSPACE}`);
+console.log(process.env);
 
 const sshDeploy = (() => {
     const rsync = ({ privateKey, src, dest, args }) => {
