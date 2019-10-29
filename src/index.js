@@ -6,7 +6,8 @@ const nodeCmd = require('node-cmd');
 const nodeRsync = require('rsyncwrapper');
 
 const { REMOTE_HOST, REMOTE_USER, SSH_PRIVATE_KEY, DEPLOY_KEY_NAME, SOURCE, TARGET, ARGS, GITHUB_WORKSPACE, HOME } = process.env;
-console.log('GITHUB_WORKSPACE', GITHUB_WORKSPACE);
+console.log(`GITHUB_WORKSPACE is set to: ${GITHUB_WORKSPACE}`);
+console.log(process.env);
 
 const sshDeploy = (() => {
     const rsync = ({ privateKey, src, dest, args }) => {
